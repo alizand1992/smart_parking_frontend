@@ -5,6 +5,11 @@ import Button from 'react-bootstrap/Button';
 class Location extends React.Component {
   render() {
     const { name, desc } = this.props;
+
+    if (!name && !desc) {
+      return null;
+    }
+
     return (
       <Card>
         <Card.Header>

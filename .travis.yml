@@ -1,0 +1,20 @@
+language: node_js
+
+node_js:
+  - 12.16.2
+
+branches:
+  only:
+    - master
+    - /RF-\d*-/
+
+jobs:
+  include:
+    - name: "Jest + Enzyme Tests"
+      script:
+        - npm install
+        - npm run test
+    - name: "Linter"
+      script:
+        - npm install
+        - npm run eslint

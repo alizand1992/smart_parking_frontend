@@ -20,5 +20,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jest" level="project" />
+    <orderEntry type="library" name="@types/jest" level="application" />
   </component>
 </module>

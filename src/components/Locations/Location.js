@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
@@ -27,5 +29,10 @@ class Location extends React.Component {
     );
   }
 }
+
+Location.propTypes = {
+  name: PropTypes.string.required,
+  desc: PropTypes.string.optional,
+};
 
 export default Location;

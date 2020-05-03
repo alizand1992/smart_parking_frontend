@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { v1 as uuidv1 } from 'uuid'
+import { v1 as uuidv1 } from 'uuid';
 
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -30,11 +30,12 @@ class Locations extends React.Component {
           desc: 'location information. Something nice about this place 2',
         },
       ],
-    }
+    };
   }
 
   render() {
     const { locations } = this.state;
+
     return (
       <Row>
         {locations.map((location) => {

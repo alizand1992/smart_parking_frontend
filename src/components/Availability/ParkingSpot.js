@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Status from './Status';
+import PropTypes from 'prop-types';
 
 class ParkingSpot extends React.Component {
   render() {
@@ -24,5 +25,10 @@ class ParkingSpot extends React.Component {
     );
   }
 }
+
+ParkingSpot.propTypes = {
+  available: PropTypes.string.required,
+  number: PropTypes.string.optional,
+};
 
 export default ParkingSpot;

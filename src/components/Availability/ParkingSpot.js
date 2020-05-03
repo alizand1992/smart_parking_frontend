@@ -27,8 +27,8 @@ class ParkingSpot extends React.Component {
 }
 
 ParkingSpot.propTypes = {
-  available: PropTypes.string.required,
-  number: PropTypes.string.optional,
+  available: PropTypes.string.isRequired,
+  number: PropTypes.string,
 };
 
 export default ParkingSpot;

@@ -31,8 +31,8 @@ class Location extends React.Component {
 }
 
 Location.propTypes = {
-  name: PropTypes.string.required,
-  desc: PropTypes.string.optional,
+  name: PropTypes.string.isRequired,
+  desc: PropTypes.string,
 };
 
 export default Location;

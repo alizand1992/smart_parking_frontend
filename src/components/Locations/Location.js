@@ -3,14 +3,17 @@ import PropTypes from 'prop-types';
 
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 class Location extends React.Component {
   render() {
-    const { name, desc } = this.props;
+    const { desc, id, name } = this.props;
 
-    if (!name && !desc) {
+    if (!id || !name) {
       return null;
     }
+
+    const link = `/availability/${id}`
 
     return (
       <Card>
@@ -21,9 +24,11 @@ class Location extends React.Component {
           <Card.Text>
             {desc}
           </Card.Text>
-          <Button variant="primary">
-            Go to location
-          </Button>
+          <Link to={link}>
+            <Button variant="primary">
+              Go to location
+            </Button>
+          </Link>
         </Card.Body>
       </Card>
     );
@@ -31,8 +36,9 @@ class Location extends React.Component {
 }
 
 Location.propTypes = {
-  name: PropTypes.string.isRequired,
   desc: PropTypes.string,
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default Location;

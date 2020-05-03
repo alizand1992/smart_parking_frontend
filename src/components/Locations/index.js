@@ -14,20 +14,24 @@ class Locations extends React.Component {
     this.state = {
       locations: [
         {
+          id: 1,
           name: 'location name',
           desc: 'location information. Something nice about this place',
         },
         {
+          id: 2,
           name: 'location name 2',
           desc: 'location information. Something nice about this place 2',
         },
         {
-          name: 'location name 2',
-          desc: 'location information. Something nice about this place 2',
+          id: 3,
+          name: 'location name 3',
+          desc: 'location information. Something nice about this place 3',
         },
         {
-          name: 'location name 2',
-          desc: 'location information. Something nice about this place 2',
+          id: 4,
+          name: 'location name 4',
+          desc: 'location information. Something nice about this place 4',
         },
       ],
     };
@@ -41,7 +45,7 @@ class Locations extends React.Component {
         {locations.map((location) => {
           return (
             <Col md={3} key={uuidv1()}>
-              <Location name={location.name} desc={location.desc} />
+              <Location id={location.id} name={location.name} desc={location.desc} />
             </Col>
           );
         })}

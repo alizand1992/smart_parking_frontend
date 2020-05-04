@@ -10,7 +10,7 @@ describe('Locations', () => {
   const wrapper = shallow(<Availability match={
     {
       params: {
-       id: 1,
+        id: 1,
       }
     }
   } />);

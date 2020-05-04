@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
@@ -13,7 +12,7 @@ class Location extends React.Component {
       return null;
     }
 
-    const link = `/availability/${id}`
+    const link = `/availability/${id}`;
 
     return (
       <Card>
@@ -34,11 +33,5 @@ class Location extends React.Component {
     );
   }
 }
-
-Location.propTypes = {
-  desc: PropTypes.string,
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-};
 
 export default Location;

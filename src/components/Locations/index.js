@@ -2,39 +2,25 @@ import React from 'react';
 
 import { v1 as uuidv1 } from 'uuid';
 
+import Alert from 'react-bootstrap/Alert';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 import Location from './Location';
+import { getLocations } from '../../util/locationsAjax';
 
 class Locations extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      locations: [
-        {
-          id: 1,
-          name: 'location name',
-          desc: 'location information. Something nice about this place',
-        },
-        {
-          id: 2,
-          name: 'location name 2',
-          desc: 'location information. Something nice about this place 2',
-        },
-        {
-          id: 3,
-          name: 'location name 3',
-          desc: 'location information. Something nice about this place 3',
-        },
-        {
-          id: 4,
-          name: 'location name 4',
-          desc: 'location information. Something nice about this place 4',
-        },
-      ],
+      locations: [],
     };
+  }
+
+  componentDidMount() {
+
+    getLocations(locations => this.setState({ locations }));
   }
 
   render() {
@@ -42,6 +28,11 @@ class Locations extends React.Component {
 
     return (
       <Row>
+        {locations.length === 0 &&
+          <Col md={{ span: 6, offset: 3 }}>
+            <Alert variant="warning">There are no locations available</Alert>
+          </Col>
+        }
         {locations.map((location) => {
           return (
             <Col md={3} key={uuidv1()}>

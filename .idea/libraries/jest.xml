@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="jest" type="kotlin.js">
-    <CLASSES>
-      <root url="file://$PROJECT_DIR$/node_modules/jest" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

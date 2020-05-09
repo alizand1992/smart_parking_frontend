@@ -48,4 +48,5 @@ module.exports = {
       'version': 'detect',
     },
   },
+  "parser": "babel-eslint",
 };

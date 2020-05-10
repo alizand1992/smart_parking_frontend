@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46bec062-1a88-4485-ae8b-7fe31647406e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Locations/Edit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ParkingSpots/Link.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ParkingSpots/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/parkingSpotsAjax.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Locations/Add.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Locations/Add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/locationsAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/locationsAjax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/components/Availability/ParkingSpot.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/components/Availability/ParkingSpot.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Availability/ParkingSpot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ParkingSpots/ParkingSpot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Locations/Location.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Locations/Location.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +56,11 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Spots" />
+    </key>
   </component>
   <component name="RubyModuleManagerSettings">
     <option name="blackListedRootsPaths">
@@ -99,12 +110,24 @@
       <option name="presentableId" value="Default" />
       <updated>1588963133263</updated>
       <workItem from="1588963138020" duration="4742000" />
-      <workItem from="1589068514999" duration="3809000" />
+      <workItem from="1589068514999" duration="8392000" />
     </task>
+    <task id="LOCAL-00001" summary="create locations">
+      <created>1589072407443</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589072407443</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create locations" />
+    <option name="LAST_COMMIT_MESSAGE" value="create locations" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="445" width="965" height="565" key="#ESLint" timestamp="1588968687581">
@@ -115,6 +138,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="454" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1588963265255" />
+    <state x="3333" y="268" width="1003" height="911" key="CommitChangelistDialog2" timestamp="1589072407393">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3333" y="268" width="1003" height="911" key="CommitChangelistDialog2/72.27.2488.1413/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589072407393" />
     <state x="774" y="304" width="424" height="520" key="FileChooserDialogImpl" timestamp="1588963189587">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -148,13 +175,18 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="498" height="446" key="SwitcherDM/72.27.1848.1053@72.27.1848.1053" timestamp="1588965629643" />
+    <state x="3435" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1589072409072">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3435" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.2488.1413/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589072409072" />
     <state x="72" y="261" width="1838" height="599" key="new project wizard" timestamp="1588963194427">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="72" y="261" width="1838" height="599" key="new project wizard/72.27.1848.1053@72.27.1848.1053" timestamp="1588963194427" />
-    <state x="197" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1588966031506">
-      <screen x="72" y="27" width="1848" height="1053" />
+    <state x="2733" y="317" width="931" height="928" key="search.everywhere.popup" timestamp="1589083964837">
+      <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state x="197" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1588966031506" />
+    <state x="2733" y="317" width="931" height="928" key="search.everywhere.popup/72.27.2488.1413/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589083964837" />
   </component>
 </project>

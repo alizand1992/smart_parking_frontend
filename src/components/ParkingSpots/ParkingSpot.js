@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Status from './Status';
+import Status from '../Availability/Status';
 
 class ParkingSpot extends React.Component {
   render() {

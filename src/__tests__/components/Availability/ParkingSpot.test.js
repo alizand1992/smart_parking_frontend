@@ -4,7 +4,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import Enzyme, { shallow } from 'enzyme';
 import Card from 'react-bootstrap/Card';
 
-import ParkingSpot from '../../../components/Availability/ParkingSpot';
+import ParkingSpot from '../../../components/ParkingSpots/ParkingSpot';
 
 Enzyme.configure({ adapter: new Adapter() });
 

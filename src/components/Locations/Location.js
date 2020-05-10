@@ -13,7 +13,7 @@ class Location extends React.Component {
     }
 
     const link = `/availability/${id}`;
-
+    const editLink = `/locations/${id}/edit`;
     return (
       <Card>
         <Card.Header>
@@ -26,6 +26,12 @@ class Location extends React.Component {
           <Link to={link}>
             <Button variant="primary">
               Go to location
+            </Button>
+          </Link>
+          {' '}
+          <Link to={editLink}>
+            <Button variant="success">
+              Edit
             </Button>
           </Link>
         </Card.Body>

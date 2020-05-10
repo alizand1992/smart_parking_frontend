@@ -18,6 +18,9 @@ class Navigation extends React.Component {
               <NavDropdown.Item href="/locations">All Locations</NavDropdown.Item>
               <NavDropdown.Item href="/locations/add">Add Locations</NavDropdown.Item>
             </NavDropdown>
+            <NavDropdown id="parking-spots-dropdown" title="Parking Spots">
+              <NavDropdown.Item href="/parking_spots">All Parking Spots</NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

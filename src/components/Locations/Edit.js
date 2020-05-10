@@ -21,27 +21,8 @@ class Edit extends React.Component {
 
     this.state = {
       id: -1,
-      parkingSpots: [
-        {
-          id: 1,
-          name: 'A1',
-          desc: 'Level one parking',
-        },
-        {
-          id: 2,
-          name: 'A2',
-          desc: 'Level one parking',
-        },
-        {
-          id: 3,
-          name: 'B3',
-          desc: 'Level two parking',
-        },
-      ],
-      locationSpots: [
-        1,
-        2,
-      ],
+      parkingSpots: [],
+      locationSpots: [],
     };
   }
 
@@ -51,7 +32,17 @@ class Edit extends React.Component {
     this.setState({ id });
 
     getParkingSpotsForLocation(id, (res) => {
-      console.log(res);
+      const parkingSpots = res.data;
+      const locationSpots = [];
+      parkingSpots.forEach((spot) => {
+        console.log(spot)
+        const { id: spot_id, location_id } = spot;
+        if (!locationSpots.includes(spot_id) && location_id != id) {
+          locationSpots.push(spot_id);
+        }
+      });
+
+      this.setState({ parkingSpots, locationSpots })
     });
   }
 
@@ -99,12 +90,12 @@ class Edit extends React.Component {
         </Row>
         <Row>
           {parkingSpots.map((spot) => {
-            const { name, desc, id } = spot;
+            const { number, desc, id } = spot;
             return (
               <Col lg={3} key={uuidv1()}>
                 <Card>
                   <Card.Header>
-                    {name}
+                    {number}
                   </Card.Header>
                   <Card.Body>
                     <Card.Text>

@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Status from '../Availability/Status';
+import Status from '../../Availability/Status';
 
-class ParkingSpot extends React.Component {
+class Availability extends React.Component {
   render() {
     const { available, number } = this.props;
 
@@ -25,4 +25,4 @@ class ParkingSpot extends React.Component {
   }
 }
 
-export default ParkingSpot;
+export default Availability;

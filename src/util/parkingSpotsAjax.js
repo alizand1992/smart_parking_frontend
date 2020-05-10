@@ -3,7 +3,7 @@ import axios from 'axios';
 export const getParkingSpots = (callback) => {
   axios.get('/api/parking_spots')
     .then((res) => {
-      callback(res);
+      callback(res.data);
     }).catch((err) => {
       console.log(err);
     });

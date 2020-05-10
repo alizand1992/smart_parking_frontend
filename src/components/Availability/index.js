@@ -8,6 +8,7 @@ class Availability extends React.Component {
       id: -1,
     };
   }
+
   componentDidMount() {
     const { id } = this.props.match.params;
 

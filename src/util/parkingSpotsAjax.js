@@ -9,6 +9,15 @@ export const getParkingSpots = (callback) => {
     });
 };
 
+export const getParkingSpotsForLocation = (location_id, callback) => {
+  axios.get(`/api/parking_spots/available/${location_id}`)
+    .then((res) => {
+      callback(res);
+    }).catch((err) => {
+      console.log(err);
+    });
+};
+
 export const syncParkingSpots = (callback) => {
   axios.get('/api/parking_spots/sync')
     .then((res) => {
@@ -16,4 +25,12 @@ export const syncParkingSpots = (callback) => {
     }).catch((err) => {
       console.log(err);
     });
+};
+
+export const linkSpotToLocation = (location_id, spot_id, callback) => {
+
+};
+
+export const unlinkSpotFromLocation = (location_id, spot_id, callback) => {
+
 };

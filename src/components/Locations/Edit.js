@@ -102,8 +102,8 @@ class Edit extends React.Component {
                       {desc}
                     </Card.Text>
                     {locationSpots.includes(id)
-                      ? (<Button variant="danger" onClick={(e) => this.remove(e, id)}>- Remove</Button>)
-                      : (<Button variant="success" onClick={(e) => this.add(e, id)}>+ Add</Button>)
+                      ? (<Button variant="success" onClick={(e) => this.add(e, id)}>+ Link</Button>)
+                      : (<Button variant="danger" onClick={(e) => this.remove(e, id)}>- Unlink</Button>)
                     }
                   </Card.Body>
                 </Card>

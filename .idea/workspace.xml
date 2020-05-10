@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46bec062-1a88-4485-ae8b-7fe31647406e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ParkingSpots/ParkingSpot/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__tests__/components/Availability/ParkingSpot.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/components/Availability/ParkingSpot.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Locations/Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Locations/Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ParkingSpots/ParkingSpot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ParkingSpots/ParkingSpot/Availability.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ParkingSpots/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ParkingSpots/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/parkingSpotsAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/parkingSpotsAjax.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +107,7 @@
       <updated>1588963133263</updated>
       <workItem from="1588963138020" duration="4742000" />
       <workItem from="1589068514999" duration="11131000" />
-      <workItem from="1589151150289" duration="2522000" />
+      <workItem from="1589151150289" duration="2652000" />
     </task>
     <task id="LOCAL-00001" summary="create locations">
       <created>1589072407443</created>
@@ -142,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589151290361</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add description to the parking spots">
+      <created>1589153692001</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589153692001</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +154,8 @@
     <MESSAGE value="create locations" />
     <MESSAGE value="Whole buncha shit" />
     <MESSAGE value="Remove linter it was pissing me off" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove linter it was pissing me off" />
+    <MESSAGE value="Add description to the parking spots" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add description to the parking spots" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="445" width="965" height="565" key="#ESLint" timestamp="1588968687581">
@@ -163,10 +166,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="454" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1588963265255" />
-    <state x="3333" y="268" width="1003" height="911" key="CommitChangelistDialog2" timestamp="1589151290272">
+    <state x="3333" y="268" width="1003" height="911" key="CommitChangelistDialog2" timestamp="1589153691949">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
-    <state x="3333" y="268" width="1003" height="911" key="CommitChangelistDialog2/72.27.2488.1413/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589151290272" />
+    <state x="3333" y="268" width="1003" height="911" key="CommitChangelistDialog2/72.27.2488.1413/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589153691949" />
     <state x="774" y="304" width="424" height="520" key="FileChooserDialogImpl" timestamp="1588963189587">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -204,10 +207,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="498" height="446" key="SwitcherDM/72.27.1848.1053@72.27.1848.1053" timestamp="1588965629643" />
-    <state x="3435" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1589151292224">
+    <state x="3435" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1589153693658">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
-    <state x="3435" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.2488.1413/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589151292224" />
+    <state x="3435" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.2488.1413/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589153693658" />
     <state x="72" y="261" width="1838" height="599" key="new project wizard" timestamp="1588963194427">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>

@@ -10,7 +10,3 @@ jobs:
       script:
         - npm install
         - npm run test
-    - name: "Linter"
-      script:
-        - npm install
-        - npm run eslint

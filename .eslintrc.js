@@ -27,7 +27,12 @@ module.exports = {
   'rules': {
     'indent': [
       'error',
-      2,
+      2, {
+        'ignoredNodes': [
+          'JSXAttribute',
+          'JSXSpreadAttribute',
+        ],
+      },
     ],
     'linebreak-style': [
       'error',

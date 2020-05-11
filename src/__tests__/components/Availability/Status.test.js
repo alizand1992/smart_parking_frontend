@@ -5,7 +5,7 @@ import Enzyme, { shallow } from 'enzyme';
 
 import Badge from 'react-bootstrap/Badge';
 
-import Status from '../../../components/Availability/Status';
+import Status from '../../../components/ParkingSpots/ParkingSpot/Status';
 
 Enzyme.configure({ adapter: new Adapter() });
 

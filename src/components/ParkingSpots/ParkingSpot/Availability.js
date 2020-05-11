@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Status from '../../Availability/Status';
+import Status from './Status';
 
 class Availability extends React.Component {
   render() {

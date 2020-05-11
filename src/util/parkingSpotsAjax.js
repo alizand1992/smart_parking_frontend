@@ -27,10 +27,27 @@ export const syncParkingSpots = (callback) => {
     });
 };
 
-export const linkSpotToLocation = (location_id, spot_id, callback) => {
-
+export const linkSpotToLocation = (location_id, spot_id, authenticity_token, callback) => {
+  axios.post('/api/location/parking_spot/link', {
+    authenticity_token,
+    location_id,
+    spot_id,
+  }).then(() => {
+    callback();
+  }).catch((err) => {
+    console.log(err);
+  });
 };
 
-export const unlinkSpotFromLocation = (location_id, spot_id, callback) => {
+export const unlinkSpotFromLocation = (location_id, spot_id, authenticity_token, callback) => {
+  axios.post('/api/location/parking_spot/unlink', {
+    authenticity_token,
+    location_id,
+    spot_id,
+  }).then(() => {
+    callback();
+  }).catch((err) => {
+    console.log(err);
+  });
 
 };

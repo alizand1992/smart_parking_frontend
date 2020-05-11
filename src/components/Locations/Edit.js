@@ -13,6 +13,7 @@ import {
   linkSpotToLocation,
   getParkingSpotsForLocation,
 } from '../../util/parkingSpotsAjax';
+import { requestAuthToken } from '../../util/locationsAjax';
 
 
 class Edit extends React.Component {
@@ -38,41 +39,45 @@ class Edit extends React.Component {
         const { id: spot_id } = spot;
         const location_id = spot.location_id !== null ? spot.location_id.toString() : '0';
 
-        if (!locationSpots.includes(spot_id) && location_id !== id) {
+        if (location_id === id) {
           locationSpots.push(spot_id);
         }
       });
 
       this.setState({ parkingSpots, locationSpots });
     });
+
+    requestAuthToken((res) => {
+      this.setState({ ...res });
+    });
   }
 
-  remove = (e, spot_id) => {
+  unlink = (e, spot_id) => {
     e.preventDefault();
 
-    const { id: location_id, locationSpots } = this.state;
+    const { id: location_id, authenticity_token } = this.state;
 
     if (location_id === -1) {
       return;
     }
 
-    unlinkSpotFromLocation(location_id, spot_id,(res) => {
-      locationSpots.push(spot_id);
+    unlinkSpotFromLocation(location_id, spot_id, authenticity_token, () => {
+      const locationSpots = this.state.locationSpots.filter(item => item !== spot_id);
       this.setState({ locationSpots });
     });
   }
 
-  add = (e, spot_id) => {
+  link = (e, spot_id) => {
     e.preventDefault();
 
-    const { id: location_id } = this.state;
+    const { id: location_id, locationSpots, authenticity_token } = this.state;
 
     if (location_id === -1) {
       return;
     }
 
-    linkSpotToLocation(location_id, spot_id, (res) => {
-      const locationSpots = this.state.locationSpots.filter(item => item !== spot_id);
+    linkSpotToLocation(location_id, spot_id, authenticity_token, () => {
+      locationSpots.push(spot_id);
       this.setState({ locationSpots });
     });
   }
@@ -92,6 +97,7 @@ class Edit extends React.Component {
         <Row>
           {parkingSpots.map((spot) => {
             const { number, desc, id } = spot;
+
             return (
               <Col lg={3} key={uuidv1()}>
                 <Card>
@@ -103,8 +109,8 @@ class Edit extends React.Component {
                       {desc}
                     </Card.Text>
                     {locationSpots.includes(id)
-                      ? (<Button variant="success" onClick={(e) => this.add(e, id)}>+ Link</Button>)
-                      : (<Button variant="danger" onClick={(e) => this.remove(e, id)}>- Unlink</Button>)
+                      ? (<Button variant="danger" onClick={(e) => this.unlink(e, id)}>- Unlink</Button>)
+                      : (<Button variant="success" onClick={(e) => this.link(e, id)}>+ Link</Button>)
                     }
                   </Card.Body>
                 </Card>

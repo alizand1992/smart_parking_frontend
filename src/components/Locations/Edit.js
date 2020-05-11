@@ -35,14 +35,15 @@ class Edit extends React.Component {
       const parkingSpots = res.data;
       const locationSpots = [];
       parkingSpots.forEach((spot) => {
-        console.log(spot)
-        const { id: spot_id, location_id } = spot;
-        if (!locationSpots.includes(spot_id) && location_id != id) {
+        const { id: spot_id } = spot;
+        const location_id = spot.location_id !== null ? spot.location_id.toString() : '0';
+
+        if (!locationSpots.includes(spot_id) && location_id !== id) {
           locationSpots.push(spot_id);
         }
       });
 
-      this.setState({ parkingSpots, locationSpots })
+      this.setState({ parkingSpots, locationSpots });
     });
   }
 

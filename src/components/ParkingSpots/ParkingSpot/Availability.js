@@ -4,7 +4,7 @@ import Status from './Status';
 
 class Availability extends React.Component {
   render() {
-    const { available, number } = this.props;
+    const { availability, number } = this.props;
 
     if (!number) {
       return null;
@@ -17,7 +17,7 @@ class Availability extends React.Component {
         </Card.Header>
         <Card.Body>
           <Card.Text>
-            Availability: <Status available={available} />
+            Availability: <Status available={availability} />
           </Card.Text>
         </Card.Body>
       </Card>

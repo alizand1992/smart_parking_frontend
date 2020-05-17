@@ -64,6 +64,7 @@ class Availability extends React.Component {
         if (parkingSpots) {
           const availabilities = Object.values(data)[0];
 
+          console.log('got triggered');
           parkingSpots.forEach((ps) => {
             availabilities.forEach((availability) => {
               if (availability.id === ps.aws_id) {

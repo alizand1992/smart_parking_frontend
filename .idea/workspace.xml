@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46bec062-1a88-4485-ae8b-7fe31647406e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ActionTypes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/webSocketActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/webSocketReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Availability/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Availability/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +109,7 @@
       <workItem from="1589068514999" duration="11131000" />
       <workItem from="1589151150289" duration="2652000" />
       <workItem from="1589662956719" duration="18359000" />
+      <workItem from="1589732258196" duration="2232000" />
     </task>
     <task id="LOCAL-00001" summary="create locations">
       <created>1589072407443</created>

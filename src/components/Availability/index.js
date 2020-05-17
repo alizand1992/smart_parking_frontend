@@ -8,6 +8,9 @@ import { default as ParkingAvailability } from '../ParkingSpots/ParkingSpot/Avai
 import { getParkingSpots } from '../../util/parkingSpotsAjax';
 import Spinner from 'react-bootstrap/Spinner';
 import Alert from 'react-bootstrap/Alert';
+import { connect } from 'react-redux';
+import { removeWebSocket, setWebSocket } from '../../actions/webSocketActions';
+import { bindActionCreators } from 'redux';
 
 class Availability extends React.Component {
   constructor(props) {
@@ -15,7 +18,6 @@ class Availability extends React.Component {
 
     this.state = {
       id: -1,
-      ws: undefined,
       errors: [],
       loading: true,
       checkStatusRetries: 5,
@@ -24,6 +26,11 @@ class Availability extends React.Component {
 
   componentDidMount() {
     this.establishWebSocketConnection();
+
+    if (this.props.ws) {
+      this.checkStatus();
+    }
+
     const { id } = this.props.match.params;
 
     getParkingSpots((res) => {
@@ -34,9 +41,15 @@ class Availability extends React.Component {
     });
   }
 
+  componentWillUnmount() {
+    this.props.removeWebSocket();
+  }
+
   establishWebSocketConnection = (retries = 5) => {
-    let { ws } = this.state;
-    ws = new WebSocket('wss://asrxll77p6.execute-api.us-west-1.amazonaws.com/parkingSpotsAPI');
+    let { ws } = this.props;
+    if (!ws) {
+      ws = new WebSocket('wss://asrxll77p6.execute-api.us-west-1.amazonaws.com/parkingSpotsAPI');
+    }
 
     ws.onerror = (event) => {
       console.log('error', event);
@@ -64,8 +77,6 @@ class Availability extends React.Component {
             parkingSpotsWithAvailability.push(ps);
           });
 
-          console.log(parkingSpotsWithAvailability);
-
           this.setState({
             loading: false,
             parkingSpots: parkingSpotsWithAvailability,
@@ -75,25 +86,16 @@ class Availability extends React.Component {
     };
 
     ws.onopen = () => {
-      this.setState({ ws });
+      this.props.setWebSocket(ws);
       this.checkStatus();
-    };
-
-    ws.onclose = (event) => {
-      if (retries !== 0) {
-        this.establishWebSocketConnection(retries - 1);
-      } else {
-        this.setState({
-          errors: ['There was an error connecting to the server.']
-        });
-      }
     };
   }
 
   checkStatus = (retries = 5) => {
-    const { loading, ws } = this.state;
+    const { ws } = this.props;
+    const { loading } = this.state;
     if (ws && retries !== 0 && loading) {
-      ws.send('{ "action": "getParkingSpots" }', {}, (data) => {});
+      ws.send('{ "action": "getParkingSpots" }');
       setTimeout(
         () => {
           this.checkStatus(retries - 1);
@@ -142,7 +144,6 @@ class Availability extends React.Component {
       <Row>
         {parkingSpots.map(spot => {
           const { number, availability } = spot;
-          console.log(number, availability)
 
           return (
             <Col lg={3} style={{ marginBottom: '20px' }} key={uuidv1()}>
@@ -155,4 +156,10 @@ class Availability extends React.Component {
   }
 }
 
-export default Availability;
+const mapStateToProps = (state) => ({
+  ws: state.ws,
+});
+
+const mapDispatchToProps = (dispatch) => bindActionCreators({ setWebSocket, removeWebSocket }, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Availability);

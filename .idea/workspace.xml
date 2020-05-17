@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="46bec062-1a88-4485-ae8b-7fe31647406e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActionTypes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/webSocketActions.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Availability/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Availability/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ParkingSpots/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ParkingSpots/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/webSocketReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/parkingSpotsAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/parkingSpotsAjax.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +116,7 @@
       <workItem from="1589068514999" duration="11131000" />
       <workItem from="1589151150289" duration="2652000" />
       <workItem from="1589662956719" duration="18359000" />
-      <workItem from="1589732258196" duration="2232000" />
+      <workItem from="1589732258196" duration="8553000" />
     </task>
     <task id="LOCAL-00001" summary="create locations">
       <created>1589072407443</created>
@@ -181,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589687221886</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Got the shit working">
+      <created>1589741078640</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1589741078640</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,10 +222,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="454" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1588963265255" />
-    <state x="3333" y="268" width="1003" height="911" key="CommitChangelistDialog2" timestamp="1589687221840">
+    <state x="3333" y="268" width="1003" height="911" key="CommitChangelistDialog2" timestamp="1589741078559">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
-    <state x="3333" y="268" width="1003" height="911" key="CommitChangelistDialog2/72.27.2488.1413/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589687221840" />
+    <state x="3333" y="268" width="1003" height="911" key="CommitChangelistDialog2/72.27.2488.1413/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589741078559" />
     <state x="774" y="304" width="424" height="520" key="FileChooserDialogImpl" timestamp="1588963189587">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -253,6 +267,10 @@
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state x="3435" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.2488.1413/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589687222909" />
+    <state x="1007" y="342" width="618" height="783" key="find.popup" timestamp="1589744674524">
+      <screen x="72" y="27" width="2488" height="1413" />
+    </state>
+    <state x="1007" y="342" width="618" height="783" key="find.popup/72.27.2488.1413/2560.0.2560.1440@72.27.2488.1413" timestamp="1589744674524" />
     <state x="72" y="261" width="1838" height="599" key="new project wizard" timestamp="1588963194427">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -261,10 +279,10 @@
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state x="3504" y="335" key="run.anything.popup/72.27.2488.1413/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589686352960" />
-    <state x="2733" y="317" width="931" height="928" key="search.everywhere.popup" timestamp="1589693074719">
+    <state x="2733" y="317" width="931" height="928" key="search.everywhere.popup" timestamp="1589746251880">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state x="197" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1588966031506" />
-    <state x="2733" y="317" width="931" height="928" key="search.everywhere.popup/72.27.2488.1413/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589693074719" />
+    <state x="2733" y="317" width="931" height="928" key="search.everywhere.popup/72.27.2488.1413/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589746251880" />
   </component>
 </project>

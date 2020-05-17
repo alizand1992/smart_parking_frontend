@@ -1,2 +1,0 @@
-export const SET_WEB_SOCKET = 'SET_WEB_SOCKET';
-export const REMOVE_WEB_SOCKET = 'REMOVE_WEB_SOCKET';

@@ -13,17 +13,51 @@ class Availability extends React.Component {
 
     this.state = {
       id: -1,
+      ws: undefined,
     };
   }
 
+
   componentDidMount() {
     const { id } = this.props.match.params;
+    let { ws } = this.state;
+
+    if (!ws) {
+      ws = new WebSocket('wss://asrxll77p6.execute-api.us-west-1.amazonaws.com/parkingSpotsAPI');
+
+      ws.onerror = (event) => {
+        console.log(ws.readyState);
+        console.log('error', event);
+      };
+
+      ws.onmessage = (data) => {
+        console.log(ws.readyState);
+        console.log('message', data);
+      };
+
+      ws.onopen = () => {
+        console.log('open', ws.readyState);
+      };
+
+      ws.onclose = (event) => {
+        console.log(ws.readyState);
+        console.log('close', event);
+      };
+    }
 
     getParkingSpots((res) => {
       this.setState({
         id,
         parkingSpots: res,
+        ws
       });
+    });
+  }
+
+  checkStatus = () => {
+    console.log(this.state.ws.readyState);
+    this.state.ws.send('{ "action": "getParkingSpots" }', {}, (data) => {
+      console.log(data);
     });
   }
 
@@ -36,6 +70,7 @@ class Availability extends React.Component {
 
     return (
       <Row>
+        <button onClick={this.checkStatus}>Check Satus</button>
         {parkingSpots.map(spot => {
           const { number, availability } = spot;
 
